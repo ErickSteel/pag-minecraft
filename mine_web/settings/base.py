@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'apps.aplicaciones',
+    'graphene_django',
 ]
 
 MIDDLEWARE = [
@@ -122,3 +124,7 @@ STATICFILES_DIRS = (os.path.join(os.path.dirname(BASE_DIR),'static'),)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = (os.path.join(os.path.dirname(BASE_DIR),'media'),)
+
+GRAPHENE = {
+    'SCHEMA': 'mine_web.schema.schema',
+}
